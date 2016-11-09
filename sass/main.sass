@@ -1,0 +1,1067 @@
+@import "vars.sass"
+
+//Load Libs SASS
+@import "../app/libs/owl.carousel/dist/assets/owl.carousel.min"
+@import "../app/libs/liMarquee/liMarquee"
+@import "../app/libs/jquery-ui/css/jquery-ui.min"
+@import "../app/libs/magnific-popup/css/magnific-popup-custom.min"
+
+$accent-color: #00B889
+$trn-time: .3s
+$fallback: Arial, Helvetica, sans-serif
+
+.border
+	border-bottom: 1px solid #ccc
+.indent
+	margin-top: 12px
+	padding-bottom: 15px
+	h2
+		margin-bottom: 5px
+
+
+*::-webkit-input-placeholder
+	color: #8b8b8b
+	opacity: 1
+
+*:-moz-placeholder
+	color: #8b8b8b
+	opacity: 1
+
+*::-moz-placeholder
+	color: #8b8b8b
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #8b8b8b
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+h1,h2
+	font-weight: bold
+
+h1
+	font-size: 48px
+
+h2
+	font-size: 20px
+
+/* Buttons */
+.btn-apply
+	display: inline-block
+	padding: 7px 32px
+	background-color: $accent-color
+	border: none
+	text-transform: uppercase
+	color: #fff
+	font-size: 16px
+	margin-top: 20px
+	transition: all $trn-time
+	&:hover
+		background-color: lighten($accent-color, 3%)
+		color: #fff
+		text-decoration: none
+	&:active,
+	&:focus
+		background-color: darken($accent-color, 3%)
+		text-decoration: none
+		color: #fff
+
+.btn-green
+	padding: 6px 9px 6px 9px
+	background-color: $accent-color
+	color: #fff
+	text-transform: uppercase
+	transition: background-color $trn-time
+	border: none
+	text-align: center
+	font-size: 11px
+	font-weight: bold
+	border-radius: 2px
+	&:hover
+		background-color: lighten($accent-color, 3%)
+		color: #fff
+		text-decoration: none
+	&:active,
+	&:focus
+		background-color: darken($accent-color, 3%)
+		text-decoration: none
+		color: #fff
+/* Buttons END */
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: Arial, sans-serif
+	overflow-x: hidden
+
+.hidden,
+.disabled
+	display: none
+
+.page-wrap
+	width: 100%
+	max-width: 1200px
+	margin: 0 auto
+	overflow: hidden
+
+
+#header
+	max-width: 1200px
+	min-width: 320px
+	width: 100%
+	height: 52px
+	padding: 0px 15px
+	position: fixed
+	top: 0
+	background-color: #fff
+	line-height: 52px
+	@extend .border
+	z-index: 999
+	.logo-wrap
+		margin: 0 auto
+		max-width: 190px
+		img
+			max-width: 100%
+
+#navtop
+	display: inline-block
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+			a
+				padding: 9px 10px
+				border-radius: 2px
+				font: bold 11px Arial, sans-serif
+				color: #000
+				background-color: transparent
+				text-decoration: none
+				text-transform: uppercase
+				transition: background-color $trn-time
+				&:hover,
+				&.active
+					background-color: #DCDCDC
+					text-decoration: none
+.scrolled
+	box-shadow: 0 4px 4px rgba(0,0,0,0.06)
+
+#mobile-nav
+	position: fixed
+	left: 0
+	top: 52px
+	background-color: #fff
+	box-shadow: 2px 2px 10px rgba(0,0,0,.25)
+	padding: 20px 15px
+	min-width: 320px
+	display: none
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			width: 100%
+			text-align: center
+			a
+				display: block
+				color: #000
+				font: 700 12px Arial,sans-serif
+				text-transform: uppercase
+				transition: background-color $trn-time
+				text-decoration: none
+				padding: 9px 10px
+				&:hover
+					text-decoration: none
+					background-color: #dcdcdc
+
+.toggle-mnu
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 19px
+	span::after, span::before
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+	span::after
+		top: 18px
+	span 
+		position: relative
+		display: block
+	span,
+	span::after,
+	span::before
+		width: 100%
+		height: 2px
+		background-color: #000
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+	&.on span
+		background-color: transparent
+	&.on span::before
+		transform: rotate(45deg) translate(-1px, 0px)
+	&.on span::after
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.registr
+	text-align: right
+
+
+#main
+	padding-top: 52px
+	.carousel-flags
+		margin-top: 15px
+		text-align: center
+		font-family: Arial, sans-serif
+		.flag-item
+			max-width: 200px
+			display: inline-block
+			.flag-item-descr
+				display: block
+		.flag-item-img
+			text-align: center
+			max-width: 60px
+			img
+				max-width: 100%
+		.flag-item-descr
+			text-align: center
+			color: #8c8c8c
+			font: bold 10px Arial
+
+.owl-item,
+.flag-item	
+	display: inline-block
+
+.content
+	margin-top: 35px
+	header
+		h1
+			margin: 0
+			line-height: 1
+	.subnavigation
+		margin-top: 20px
+		border-top: 1px solid #e2e2e2
+		.left
+			float: left
+		.right
+			float: right
+		ul
+			margin: 10px 0
+			padding: 0
+			list-style-type: none
+			font-size: 0
+			li
+				display: inline-block
+				margin-left: 10px
+				&::after
+					border-right: 1px solid #ccc
+					padding-right: 0
+					height: 16px
+					display: inline-block
+					padding-right: 10px
+					vertical-align: -3px
+					content: ''
+				&:first-child
+					margin-left: 0
+				&:last-child
+					&::after
+						border: none
+						padding-right: 0
+			a
+				text-decoration: none
+				font-size: 11px
+				color: #333
+				text-transform: uppercase
+				&:hover
+					text-decoration: underline
+	.rank
+		border-top: 2px solid #000
+
+.s-home-search
+	padding: 15px 20px 
+	background-color: #f7f7f5
+	margin-bottom: 35px
+	.search-result
+		color: #333
+		font-weight: bold
+		font-size: 13px
+		margin: 0
+	.form
+		margin-top: 15px
+		input
+			width: 100%
+			font-size: 13px
+			height: 33px
+			padding: 9px 8px 8px
+			border-radius: 3px
+			box-sizing: border-box
+			border: 1px #e2e2e2 solid
+		.numb-select-work
+			margin-right: 7px
+			display: inline-block
+			float: right
+			position: relative
+			&-title
+				font-size: 11px
+				color: #666
+				position: relative
+				padding-right: 5px
+				cursor: pointer
+				&::after
+					content: ''
+					position: absolute
+					left: 100%
+					top: 50%
+					margin-top: -5px
+					width: 9px
+					height: 9px
+					background-image: url('data:image/gif;base64,R0lGODlhCQAJALMAAPDw7u/v7MjIx9ra2be3tt3d29fX1bOzsaOjovPz8fHx79jY16GhoPf39QAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMTEgNzkuMTU4MzI1LCAyMDE1LzA5LzEwLTAxOjEwOjIwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOkNGN0EwNUQ4Q0QzNkU2MTE4REMyOUM5NzkxMDkyRkNEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhERDM5OTA2NUYxQTExRTY5QjQ2OEVFOEU0RUZEM0I3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhERDM5OTA1NUYxQTExRTY5QjQ2OEVFOEU0RUZEM0I3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE0IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk2ODBiYjZlLWEwOWYtYzk0ZC1iZmExLTcxNjdjMjliNTgzYiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDRjdBMDVEOENEMzZFNjExOERDMjlDOTc5MTA5MkZDRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAAAAAAALAAAAAAJAAkAAAQgsMk5w1gYD6AO+x+RNAbIIIXUgeJUnum0tpSBUqowShEAOw==')
+			&-wrap
+				position: absolute
+				background-color: White
+				border: 1px solid #333C49
+				padding: 10px
+				text-align: left
+				width: 110px
+				left: 50%
+				margin-left: -55px
+				display: none
+				z-index: 99
+				.select-numb
+					text-align: left
+					white-space: nowrap
+					margin: 5px 0
+					color: #414141
+					font-size: 11px
+					padding: 2px 10px
+					cursor: pointer
+					background-color: transparent
+					font-weight: normal
+					&:hover
+						background-color: #e9f2f7
+					&.selected
+						font-weight: bold
+
+		.btn-green
+			display: block
+			width: 100%
+			height: 33px
+	
+.s-info
+	padding-bottom: 15px
+	margin-bottom: 35px
+	.colum-wrap
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	h2
+		margin: 0 0 5px
+	h3
+		font-size: 13px
+		line-height: 15px
+		font-weight: 500
+		font-family: arial,helvetica,sans-serif
+		color: #999
+		margin-top: 7px
+	.for-worker
+		ul
+			padding-left: 15px
+			margin: 0
+			li
+				font-size: 13px
+	.for-employers
+		p
+			margin: 0
+			font-size: 13px
+	.equal
+		position: relative
+		font-size: 13px
+		p,
+		li
+			line-height: 22px
+	.btn-green
+		display: block
+		margin-top: 25px
+
+	.new-jobs
+		margin: 20px 0
+		cursor: pointer
+		&:hover .new-jobs-title
+			text-decoration: underline
+		a
+			text-decoration: none
+			&:hover
+				text-decoration: none
+		&-wrap
+			height: 350px
+			max-width: 300px
+			background-color: transparent
+			overflow: hidden
+			dd
+				margin: 0
+		&-title
+			text-transform: uppercase
+			color: #6288a5
+			font: 500 16px georgia, sans-serif
+		&-descr
+			display: block
+			margin-bottom: 5px
+		&-time
+			display: inline-block
+			&::after
+				display: inline-block
+				height: 16px
+				padding-right: 10px
+				content: ''
+				vertical-align: -3px
+				border-right: 1px solid #ccc
+		&-city
+			display: inline-block
+			margin-left: 10px
+			white-space: normal
+
+.employers-img
+	img
+		max-width: 100%
+		display: inline-block
+		margin-bottom: 20px
+
+#some-text
+	#tabs-articles
+		margin-top: 30px
+		.row:first-child
+			.article
+				border-top: none
+	.tab-container
+		margin-top: 20px
+	.etabs
+		@extend .border
+		padding-left: 20px
+		margin: 0
+	.tab
+		display: inline-block
+		a
+			transition: color $trn-time
+			display: block
+			padding: 13px 30px 8px
+			text-decoration: none
+			color: #999
+			font-weight: bold
+			font-size: 17px
+		&.active
+			border-top-left-radius: 3px
+			border-top-right-radius: 3px
+			box-shadow: 0 -2px 5px rgba(0,0,0,0.05)
+			border: 1px solid #ccc
+			border-bottom: none
+			background-color: #fff
+			margin-left: 0
+			margin-right: 0
+			z-index: 99
+			position: relative
+			top: 1px
+			a
+				color: #333
+
+.tab-text
+	font-size: 18px
+	
+.contact-tab
+	padding-top: 15px
+	h2
+		margin: 0
+		line-height: 1
+	p
+		font-size: 13px
+		color: #999
+/* SUMMARY PAGE */
+
+.summary-search-wrap
+	font-size: 11px
+	margin-bottom: 23px
+	h2
+		display: inline-block
+		float: left
+		margin: 0
+		font-weight: normal
+		font-size: 16px
+	.form-wrap
+		text-align: right
+		float: right
+		.sort
+			display: inline-block
+			span,
+			button
+				vertical-align: top
+				display: inline-block
+			button
+				cursor: pointer
+				position: relative
+				color: #0096F5
+				text-decoration: underline
+				margin-left: 5px
+				border: none
+				background: none
+				padding: 0
+				&.selected
+					color: #000
+					text-decoration: none
+				&:last-child
+					&::after
+						border: none
+				&:first-child
+					margin-left: 0
+				&::after
+					height: 16px
+					padding-right: 10px
+					content: ''
+					border-right: 1px solid #0096F5
+
+.item-wrap
+	background-color: #fff
+	margin-bottom: 20px
+	.item-box
+		padding: 10px 0 10px 27px
+		overflow: hidden
+		border-top: 1px solid #ccc
+		&-inner
+			margin-left: 55px
+		&-title
+			position: relative
+			h3
+				display: inline-block
+				margin: 0
+				line-height: 1
+				font-weight: normal
+				a
+					color: #0094D6
+					&:hover
+						text-decoration: none
+			p
+				margin: 0
+				display: inline-block
+				line-height: 1
+				margin-left: 12px
+				color: #999
+			.date-publish
+				position: absolute
+				right: 0
+				top: 0
+				color: #928D8D
+				text-transform: uppercase
+				font-size: 11px
+				font-weight: bold
+				letter-spacing: 0.5px
+		.from
+			span
+				margin-left: 17px
+				color: #000
+				&:first-child
+					margin-left: 0
+				&:last-child
+					&::after
+						border: none
+				&::after
+					height: 16px
+					padding-right: 17px
+					content: ''
+					border-right: 1px solid #0094D6
+		.skills-wrap
+			margin-top: 5px
+			color: #757070
+			.skills
+				display: inline-block
+				margin-right: 35px
+				font-size: 13px
+				&:last-child
+					margin-right: 0
+				.tr
+					.td
+						&:first-child
+							span
+								padding-right: 10px
+
+.tt
+	display: table
+	.tr
+		display: table-row
+	.td
+		display: table-cell
+
+.icon-wrap
+	float: left
+	.star
+		width: 21px
+		height: 21px
+		display: inline-block
+		background-image: url(../img/star.png)
+
+.aside-filter-wrap
+	margin-top: 40px
+	h3
+		font-size: 16px
+		margin: 0 0 5px
+
+
+.aside-filter-box
+	padding: 7px 10px 35px
+	background-color: #F1F1F1
+	@extend .border
+	border-top: 1px solid #ccc
+	color: #757070
+	#filter-form
+		h2,
+		>label
+			color: #757070
+			font-size: 15px
+			font-weight: 600
+			margin: 0
+		h2
+			margin-bottom: 5px
+	.delete-tag
+		background: url(../img/delete-tag.png) no-repeat
+		display: none
+		width: 9px
+		height: 9px
+		cursor: pointer
+		position: absolute
+		right: 3px
+		top: 50%
+		margin-top: -3px
+
+	.tag-form-wrap,
+	.skills-form,
+	.money-range-form,
+	.city-form,
+	.money-range-form
+		p
+			margin: 0
+			display: inline-block
+			position: relative
+			&.ml
+				margin-left: 12px
+
+	.skills-form,
+	.city-form
+		h2
+			position: relative
+			cursor: pointer
+			&::after
+				content: ''
+				width: 23px
+				height: 11px
+				background: url(../img/arrow-bottom.png) no-repeat
+				position: absolute
+				right: 0
+				top: 50%
+				margin-top: -6px
+		.input-wrap
+			display: none
+
+	
+	.tag-form-wrap
+		padding-bottom: 15px
+		@extend .border
+
+	.skills-form
+		@extend .indent
+		@extend .border
+
+
+			
+	.working-day-form,
+	.living-form,
+	.documents-form,
+	.money-range-form,
+	.language-form,
+	.city-form
+		@extend .indent
+		@extend .border
+		label
+			display: block
+		span
+			margin-left: 15px
+			font-size: 15px
+	.language-form
+		border-bottom: none
+	
+	#money-range
+		margin-top: 20px
+		width: 95%
+		span
+			margin-left: 0
+
+.input
+	border-radius: 2px
+	border: 1px solid #ccc
+	color: #757070
+	font-size: 12px
+	width: 105px
+	padding: 0 13px 0 4px
+	height: 22px
+
+/* Register worker page */
+
+.register
+	border-top: 1px solid #ccc
+	color: #5f5f5f
+	font-family: "ArialNarrow", sans-serif
+	&-head
+		padding: 18px 25px
+		background-image: linear-gradient(#F3F3F3, #fff)
+
+.register-worker-wrap,
+.register-employer-wrap
+	margin-top: 20px
+	color: #8b8b8b
+	h4,
+	.h4
+		font-size: 17px
+		color: #5f5f5f
+		display: inline-block
+		margin-bottom: 12px
+		font-weight: bold
+		margin: 0
+	.input-wrap
+		margin-bottom: 15px
+	select
+		display: block
+		appearance: none
+	label
+		display: block
+	input[type=text],
+	select
+		display: block
+		width: 100%
+		height: 35px
+		border-radius: 2px
+		border: 1px solid #F2F2F2
+		font-size: 13px
+		&:focus
+			border-color: #ccc
+	span
+		font-size: 17px
+		margin-left: 8px
+	option
+		border: none
+
+	.contacts-wrap
+		input
+			margin-bottom: 12px
+
+	.col-md-4
+		padding: 0!important
+		.colum-wrap
+			padding: 0 30px
+			border-right: 1px solid #DBDBDB
+		&:first-child
+			.colum-wrap
+				padding-left: 14px
+		&:last-child
+			padding-right: 10px!important
+			.colum-wrap
+				border-right: none
+				padding-right: 14px
+
+.register-employer-page
+	.register-head
+		background-image: none
+		padding: 25px 17px
+		span
+			font-size: 17px
+			font-weight: normal
+
+.register
+	font-family: Arialarrow, $fallback
+	.register-employer-wrap
+		.colum-wrap
+			border: none
+			.contacts-wrap
+				.input,
+				label
+					margin-bottom: 54px
+					&:last-child
+						margin-bottom: 0
+	.register-worker-wrap
+		.col-md-4
+			&:last-child
+				.colum-wrap
+					padding-left: 36px
+
+#create-vacancy,
+#register-worker
+	margin-top: 50px
+	>h3
+		color: #5f5f5f
+		font-size: 17px
+		font-weight: normal
+		padding: 0 17px
+
+.register-employer-page
+	.etabs
+		border-bottom: 1px solid #B8B8B8
+		padding-left: 20px
+		margin: 0
+		font-size: 0
+	.tab
+		display: inline-block
+		background-color: #DBDBDB
+		a
+			display: block
+			padding: 10px 30px 8px
+			text-decoration: none
+			color: #7a7a7a
+			font-size: 22px
+			position: relative
+			line-height: 1
+			&::before
+				content: ''
+				position: absolute
+				right: 0
+				top: 0
+				height: 97%
+				width: 5px
+				box-shadow: 4px 1px 4px #A2A2A2
+		&.active
+			border: 1px solid #ccc
+			border-bottom: none
+			background-color: #F4F6F6
+			margin-left: 0
+			margin-right: 0
+			z-index: 99
+			position: relative
+			top: 1px
+			a
+				padding-top: 15px
+				box-shadow: none
+
+#create-vacancy
+	.btn-apply-wrap
+		margin-left: 15px		
+
+.page-placeholder
+	height: 200px
+
+/* POPUP */
+#popup-profession
+	max-width: 810px
+	min-width: 300px
+	background-color: #fff
+	padding: 12px 20px 8px 20px
+	position: relative
+	margin: 0 auto
+	border: 1px solid #a3a3a3
+	.h4
+		color: #545454
+		font-family: "ArialNarrow", $fallback
+		font-size: 17px
+	.input-profession,
+	.input-years
+		width: 43px
+		height: 32px
+		line-height: 32px
+		border: 1px solid #a3a3a3
+		padding: 0 5px
+		color: #757070
+	.input-profession
+		width: 100%
+	.popup-profession-select
+		margin-top: 20px
+		.btn-apply
+			display: block
+			margin-top: 60px
+			width: 100%
+	.popup-profession-select-body
+		max-height: 275px
+		overflow: auto
+		border: 1px solid #a3a3a3
+		padding: 12px
+		.profession-click
+			margin: 0 0 5px
+			display: inline-block
+			color: #8b8b8b
+			&:hover
+				cursor: pointer
+		.input-years
+			height: 25px
+			margin-left: 5px
+		.profession-select
+			color: #8b8b8b
+
+
+.vacancy-wrap
+	margin-top: 20px
+	max-width: 1050px
+	overflow: hidden
+	margin: 0 auto
+	.left
+		float: left
+	.right
+		float: right
+	.left,
+	.right
+		display: inline-block
+	.jobs-back
+		display: inline-block
+	.vacancy-registr
+		font-size: 12px
+		display: inline-block
+	.user-nav
+		display: inline-block
+		margin-left: 8px
+		span
+			display: inline-block
+		.user-logout
+			margin-left: 5px
+	.vacancy-cont
+		border: 1px solid #D2D2D2
+		margin-top: 10px
+		padding-bottom: 30px
+		.btn-apply-wrap
+			text-align: right
+			.btn-apply
+				font-weight: bold
+	.vacancy-top-gradient
+		height: 32px
+		left: 2px
+		top: 2px
+		margin-top: 2px
+		background: linear-gradient(to bottom,#F5F5F7 0,#fff 100%)
+	.vacancy-inner
+		padding: 10px 30px
+		.vacancy-title-wrap
+			border-bottom: 1px solid #CDCDCD
+		.vacancy-title,
+		.vacancy-title-from
+			font-weight: normal
+			color: #414141
+			margin-top: 20px
+			margin-bottom: 10px
+		.vacancy-title
+			font-size: 22px
+		.vacancy-title-from
+			font-size: 15px
+		.vacancy-about-title
+			margin-top: 32px
+			font-size: 16px
+			color: #414141
+			font-family: arial
+			font-weight: bold
+		.vacancy-about-cont
+			padding-bottom: 30px
+	.vacancy-info-wrap
+		background-color: #EDEDED
+		padding: 5px
+		width: 100%
+		max-width: 300px
+		margin: 0 auto
+		img
+			width: 100%
+		.td
+			padding-bottom: 10px
+			&:first-child
+				width: 40%
+			&:last-child
+				width: 60%			
+		.left-aside
+				font-weight: bold
+				text-transform: capitalize
+		.vacancy-info-cont
+			padding: 15px 10px
+			font-size: 13px
+			.tr
+				&:last-child
+					.td
+						padding-bottom: 0
+
+.contacts-list-wrap
+	padding: 10px 15px 10px 25px 
+	border-right: 1px solid #ccc
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			margin-bottom: 5px
+			span
+				cursor: pointer
+
+.delete-human,
+.delete-vacancy
+	border: none
+	background: none
+	font-size: 20px
+	color: red
+	padding: 3px
+	vertical-align: middle
+
+.message-output-wrap
+	.message-output-title
+		margin: 0 0 20px
+		font-size: 20px
+		vertical-align: middle
+		font-weight: bold
+		span
+			vertical-align: top
+			font-size: 20px
+	#message-output,
+	#message-input
+		width: 100%
+		border: 1px solid #ccc
+		padding: 15px
+		min-height: 65px
+	#message-output
+		overflow: auto
+		height: 300px
+		.message-list
+			list-style-type: none
+			padding: 0
+			margin: 0
+			.message-text-wrap
+				margin-bottom: 10px
+				overflow: hidden
+				img
+					max-width: 100%
+					border-radius: 50%
+				.human-avatar
+					width: 50px
+					height: 50px
+					display: inline-block
+					float: left
+					vertical-align: middle
+					margin-right: 8px
+				.message-text
+					vertical-align: middle
+					display: block
+					padding-left: 60px
+					line-height: 1.4
+	#message-input
+		resize: vertical
+	.message-input-wrap
+		margin-top: 20px
+
+.vacancy-list
+	padding: 0
+	list-style-type: none
+	.vacancy-name
+		margin-right: 8px
+		vertical-align: middle
+
+
+
+//ALWAYS END
+@import "media.sass"
