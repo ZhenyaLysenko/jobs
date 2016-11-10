@@ -18,6 +18,8 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery/jquery.maskedinput-1.2.2.js"></script>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script>
 	$( document ).ready(function() {
@@ -28,16 +30,22 @@
 		  $("#pop").hide();
 		});
 		$(".y-mes").click(function(event) {
+		  $( this ).css( "border", "1px solid #03ba88" );
 		  $(".pop2").show();
 		});
 		$(".pop2").click(function(event) {
 		  $(".pop2").hide();
+		  $( ".y-mes" ).css( "border", "none" );
 		});
 		$("a.btn-green").click(function(event) {
 		  $(".pop-enter").show();
 		});
 		$(".pop-enter input[type=submit]").click(function(event) {
 		  $(".pop-enter").hide();
+		});
+		jQuery(function($) {
+			$('#phone').mask('+7 (999) 999-99-99');
+			$("#tin").mask("999999999");
 		});
 	});
 	</script>
@@ -158,7 +166,50 @@
 						<span class="flag-item-descr">Lorem ipsum</span>
 					</a>
 				</div>
+<div class="flag-item">
+					<a href="#">
+						<span class="flag-item-img">
+							<img src="img/flag-1.jpg" alt="flag">
+						</span>
+						<span class="flag-item-descr">Lorem ipsum</span>
+					</a>
+				</div>
 
+				<div class="flag-item">
+					<a href="#">
+						<span class="flag-item-img">
+							<img src="img/flag-2.jpg" alt="flag">
+						</span>
+						<span class="flag-item-descr">Lorem ipsum</span>
+					</a>
+				</div>
+
+				<div class="flag-item">
+					<a href="#">
+						<span class="flag-item-img">
+							<img src="img/flag-1.jpg" alt="flag">
+						</span>
+						<span class="flag-item-descr">Lorem ipsum</span>
+					</a>
+				</div>
+
+				<div class="flag-item">
+					<a href="#">
+						<span class="flag-item-img">
+							<img src="img/flag-2.jpg" alt="flag">
+						</span>
+						<span class="flag-item-descr">Lorem ipsum</span>
+					</a>
+				</div>
+
+				<div class="flag-item">
+					<a href="#">
+						<span class="flag-item-img">
+							<img src="img/flag-1.jpg" alt="flag">
+						</span>
+						<span class="flag-item-descr">Lorem ipsum</span>
+					</a>
+				</div>
 				<div class="flag-item">
 					<a href="#">
 						<span class="flag-item-img">
@@ -264,7 +315,7 @@
 
 			<div class="content">
 				
-				<div class="container">
+				<div class="container" style="margin-left: 40px;">
 					
 					<header>
 						<nav class="subnavigation clearfix">
@@ -338,7 +389,7 @@
 												<div class="r-icon">
 													<span>Контактная информация</span>
 													<div class="in">
-														<input type="text" placeholder="Тел:    +7 (___) ___-__-__">
+														<input id="phone" type="text" tabindex="3" placeholder="Тел:    +7 (___) ___-__-__" />
 														<input style="margin-left: 10px;" type="text" placeholder="E-mail:   stevey@apple.com">
 														<img src="img/images/check.png" alt="check">
 													</div>
@@ -377,9 +428,11 @@
 												</div>
 												<div class="search-icon">
 													<span>Заработная плата:</span>
-													<div class="in">
-														<input type="text" placeholder="от ________руб.   до ________ руб.">
-														<img class="check" src="img/images/check.png" alt="check">
+														<div class="money-range-form">
+														<h2>Зарплата</h2>
+														<p><input style="width: 125px;" id="money-from" class="input range" type="text" maxlength="6" name="money-from" ></p>
+														<p class="ml"><input style="width: 120px; margin-left: 5px;" id="money-to" class="input range" type="text" maxlength="6" name="money-to" ></p>
+														<div style="width: 120px; margin-top: 50px; margin-left: 60px; float: none;" id="money-range"></div>
 													</div>
 												</div>
 												<div class="search-icon">

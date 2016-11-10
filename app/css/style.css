@@ -1,6 +1,9 @@
 input {
 	outline: none;
 }
+.container {
+	margin-left: 40px;
+}
 #some-text {
 	background-color: #f7f7f5;
 }
@@ -42,7 +45,7 @@ li.tab>a{
 	margin-left: 10px;
 }
 .social span {
-	font-size: 21px;
+	font-size: 18px;
 }
 .center {
 	overflow: hidden;
@@ -56,7 +59,7 @@ li.tab>a{
 	outline: none;
 }
 .center input[placeholder] {
-	font-size: 18px;
+	font-size: 16px;
 	color: #5d5d5d;
 }
 .center span {
@@ -88,13 +91,16 @@ li.tab>a{
 		margin-left: 0;
 	}
 }
+.search-icon input.range {
+	float: left;
+}
 input.null {
 	width: 150px;
 }
 input.sub {
 	border: none;
 	background: none;
-	background-color: #12a112;
+	background-color: #00b889;
 	color: #fff;
 	font-size: 14px;
 	width: 230px;
@@ -120,10 +126,15 @@ input.sub {
 	right: 20px;
 	bottom: 0; 
 }
+.butt {
+	position: absolute;
+	right: 235px;
+	bottom: 0; 
+}
 .buttons input, .search-icon input[type=submit] {
 	border: none;
 	background: none;
-	background-color: #12a112;
+	background-color: #00b889;
 	color: #fff;
 	font-size: 18px;
 	width: 230px;
@@ -255,7 +266,7 @@ input.sub {
 .head input[type=submit] {
 	border: none;
 	background: none;
-	background-color: #12a112;
+	background-color: #00b889;
 	color: #fff;
 	font-size: 16px;
 	width: 100px;
@@ -588,7 +599,7 @@ input.sub {
 	margin-top: 50px;
 }
 .y-mes {
-	width: 540px;
+	width: 515px;
 	padding: 15px;
 }
 .y-mes span, .o-mes span {
@@ -690,14 +701,18 @@ input.sub {
 .right-butt {
 	overflow: hidden;
 }
+.col-sm-3> a.wrap {
+	float: right;
+	margin-right: 50px;
+}
 #h {
 	position: absolute;
     top: 153px;
-    left: 607px;
+    left: 438px;
     right: 194px;
 }
 #h input {
-	width: 170px;
+	width: 340px;
 	font-size: 16px;
 }
 .logo, .year, .foo {
@@ -839,4 +854,33 @@ input.sub {
 	text-decoration: none;
 	color: #fff;
 	background-color: #008800;
+}
+#blok a {
+	font-size: 20px;
+}
+#ll {
+	margin-left: 40px;
+}
+.im {
+	margin-top: 30px;
+}
+.r-i {
+	overflow: hidden;
+	margin-top: 5px;
+}
+.r-i img {
+	float: left;
+	margin: 0;
+	margin-right: 4px;
+}
+.r-i span {
+	line-height: 1;
+	float: left;
+	font-size: 10px;
+	color: #a9a9a9;
+	font-weight: 300;
+}
+.sear {
+	margin-top: 10px;
+	overflow: hidden;
 }
